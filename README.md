@@ -32,7 +32,7 @@ coloumn names for test and train data frames are assigned from feature & activit
 
 	binding the data by row in data frame 
 
-## Get character vector of all the coloumn names of data file
+##Get character vector of all the coloumn names of data file
 
 	column <- colnames(data)
 
@@ -44,15 +44,15 @@ coloumn names for test and train data frames are assigned from feature & activit
 
 	req_data <- data[,req_col == TRUE]
 
-## merge data set by activityId
+##merge data set by activityId
 
 	merged_data <- merge(req_data, activity_lable, by ='ActivityId', all.x = TRUE)
 
-## removing Non Numeric Data Columns such as Activity Name
+##removing Non Numeric Data Columns such as Activity Name
 	
 	merged_data <- merged_data[,1:81]
 
-## agrregate data 
+##agrregate data 
 	aggregate_data <- aggregate(.~ SubjectId + ActivityId , data = merged_data, mean)
 
 ##Sort by ascending order of SubjectId & ActivityId
