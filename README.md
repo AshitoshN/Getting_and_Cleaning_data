@@ -10,7 +10,7 @@
 	The train variables are readed and stored in dataframes like - x_train, y_train, subject_train 
 
 
-## Read the Feature data
+##Read the Feature data
 
 	features data set readed and stored in feature data frame
  
